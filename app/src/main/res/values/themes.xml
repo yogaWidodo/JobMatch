@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.JobMatch" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">@color/dark_orange</item>
+    </style>
+    <style name="EtBase" parent="ThemeOverlay.Material3.TextInputEditText.OutlinedBox">
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:ems">10</item>
+        <item name="maxLines">1</item>
+    </style>
+
+    <style name="ButtonUtills" parent="Widget.MaterialComponents.Button">
+        <item name="android:background">@drawable/button_shape</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Theme.JobMatch" parent="Base.Theme.JobMatch" />
+</resources>
