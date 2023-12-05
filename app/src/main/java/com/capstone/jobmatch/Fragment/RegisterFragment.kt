@@ -1,4 +1,4 @@
-package com.capstone.jobmatch
+package com.capstone.jobmatch.Fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
+import com.capstone.jobmatch.R
 import com.capstone.jobmatch.databinding.FragmentRegisterBinding
 
 class RegisterFragment : Fragment(R.layout.fragment_register) {

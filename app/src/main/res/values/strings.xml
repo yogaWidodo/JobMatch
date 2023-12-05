@@ -20,4 +20,14 @@
     <string name="confirm_password">Confirm Password</string>
     <string name="nama">Nama</string>
     <string name="phone">Phone</string>
+    <string name="fake_username">Hotman Fatna Oslo</string>
+    <string name="fake_phone">088244118892</string>
+    <string name="fake_email">Hotman@gmail.com</string>
+    <string name="profile">Profile</string>
+    <string name="joma">Joma</string>
+    <string name="history">History</string>
+    <string name="about">About Us</string>
+    <string name="input">Input</string>
+    <string name="fake_input_data">Android Developer,cloud engineer,frontend developer,backend developer,fullstack developer,devops engineer,ios developer,android</string>
+    <string name="fake_date">14 November 2022 || 18:00</string>
 </resources>

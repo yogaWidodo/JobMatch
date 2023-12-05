@@ -1,4 +1,4 @@
-package com.capstone.jobmatch
+package com.capstone.jobmatch.Fragment
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.Navigation
+import com.capstone.jobmatch.activity.MainActivity
+import com.capstone.jobmatch.R
 import com.capstone.jobmatch.databinding.FragmentLoginBinding
 
 class LoginFragment : Fragment(R.layout.fragment_login) {
