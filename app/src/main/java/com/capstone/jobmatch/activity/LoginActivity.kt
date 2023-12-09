@@ -4,8 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentTransaction
-import com.capstone.jobmatch.Fragment.LoginFragment
-import com.capstone.jobmatch.Fragment.RegisterFragment
+import com.capstone.jobmatch.fragment.LoginFragment
+import com.capstone.jobmatch.fragment.RegisterFragment
 import com.capstone.jobmatch.R
 import com.capstone.jobmatch.databinding.ActivityLoginBinding
 

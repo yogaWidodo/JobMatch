@@ -1,4 +1,4 @@
-package com.capstone.jobmatch.Fragment
+package com.capstone.jobmatch.fragment
 
 import android.content.Intent
 import android.os.Bundle
@@ -31,12 +31,19 @@ class LoginFragment : Fragment(R.layout.fragment_login) {
             Navigation.findNavController(it).navigate(R.id.action_loginFragment_to_registerFragment)
         }
 
+        binding.tvForgotPassword.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_loginFragment_to_forgotFragment)
+        }
+
         binding.btnLogin.setOnClickListener{
             startActivity(Intent(requireActivity(), MainActivity::class.java))
         }
     }
 
-
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+    }
 
 
 }
