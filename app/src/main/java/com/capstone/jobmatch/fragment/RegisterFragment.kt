@@ -1,4 +1,4 @@
-package com.capstone.jobmatch.Fragment
+package com.capstone.jobmatch.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,26 +10,31 @@ import com.capstone.jobmatch.R
 import com.capstone.jobmatch.databinding.FragmentRegisterBinding
 
 class RegisterFragment : Fragment(R.layout.fragment_register) {
-    private lateinit var binding: FragmentRegisterBinding
+    private  var _binding: FragmentRegisterBinding? = null
+    private val binding get() = _binding!!
+
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        binding = FragmentRegisterBinding.inflate(layoutInflater, container, false)
+    ): View {
+        _binding = FragmentRegisterBinding.inflate(layoutInflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.btnRegister.setOnClickListener{
+        binding.btnRegister.setOnClickListener {
             Navigation.findNavController(it).navigate(R.id.action_registerFragment_to_loginFragment)
         }
 
     }
 
-
-
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+    }
 
 
 }
