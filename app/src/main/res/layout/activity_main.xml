@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".activity.MainActivity">
 
+    <ImageView
+        android:id="@+id/logout"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:contentDescription="@string/logout"
+        android:elevation="5dp"
+        android:src="@drawable/baseline_logout_24"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <View
         android:id="@+id/view"
         android:layout_width="match_parent"
@@ -27,6 +38,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
@@ -73,7 +85,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical|center_horizontal"
-                android:layout_marginStart="10dp"
+                android:layout_marginStart="30dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -163,42 +175,60 @@
 
         </androidx.cardview.widget.CardView>
 
+
         <androidx.cardview.widget.CardView
+            android:id="@+id/cardViewLatestResult"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_row="2"
             android:layout_column="0"
             android:layout_columnSpan="2"
             android:layout_gravity="start"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="45dp"
             app:cardBackgroundColor="@color/dark_orange"
             app:cardCornerRadius="15dp">
 
             <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_latest_result"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
                 android:layout_gravity="end"
                 android:src="@drawable/baseline_check_circle_outline_24" />
 
-
-            <AutoCompleteTextView
-                android:id="@+id/autoCompleteTextView"
-                android:layout_width="250dp"
-                android:layout_height="45dp"
-                android:paddingStart="10dp"
-                android:layout_marginStart="10dp"
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+                android:layout_width="230dp"
+                android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
-                android:paddingEnd="10dp"
-                android:drawableEnd="@drawable/baseline_arrow_drop_down_24"
-                android:background="@drawable/dropdown_white"
-                android:hint="@string/jurusan"
-                android:inputType="none" />
+                android:layout_marginStart="10dp"
+                android:background="@color/white"
+                android:elevation="5dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/autoCompleteTextView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/latest_result"
+                    android:inputType="none"
+                />
+            </com.google.android.material.textfield.TextInputLayout>
 
 
         </androidx.cardview.widget.CardView>
 
-
     </GridLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/latest_history"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/gridLayout"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/gridLayout"
+        app:layout_constraintVertical_bias="0.7" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

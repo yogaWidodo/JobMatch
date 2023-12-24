@@ -59,52 +59,16 @@
                     android:inputType="textEmailAddress" />
 
             </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="10dp"
-                android:hint="@string/password"
-                app:boxCornerRadiusBottomEnd="10dp"
-                app:boxCornerRadiusBottomStart="10dp"
-
-                app:boxCornerRadiusTopEnd="10dp"
-                app:boxCornerRadiusTopStart="10dp"
-                app:passwordToggleEnabled="true"
-                app:startIconDrawable="@drawable/baseline_password_24">
-
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etPassword"
-                    style="@style/EtBase"
-                    android:ems="10"
-                    android:inputType="textPassword" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/confirm_password"
-                app:boxCornerRadiusBottomEnd="10dp"
-                app:boxCornerRadiusBottomStart="10dp"
-                app:boxCornerRadiusTopEnd="10dp"
-                app:boxCornerRadiusTopStart="10dp"
-                app:passwordToggleEnabled="true"
-                app:startIconDrawable="@drawable/baseline_password_24">
-
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etConfirmPassword"
-                    style="@style/EtBase"
-                    android:ems="10"
-                    android:inputType="textPassword" />
-
-            </com.google.android.material.textfield.TextInputLayout>
-
+                android:text="@string/the_link_will_be_sent_to_your_email"
+                android:textColor="@android:color/holo_red_light"
+                />
 
             <Button
-                android:id="@+id/btnLogin"
+                android:id="@+id/btnSubmit"
                 style="@style/ButtonUtills"
                 android:layout_marginTop="15dp"
                 android:text="@string/submit"

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1088995105037",
+    "project_id": "refined-center-404319",
+    "storage_bucket": "refined-center-404319.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1088995105037:android:3711edda159cde74a4f844",
+        "android_client_info": {
+          "package_name": "com.capstone.jobmatch"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDX1KOSpWNVChtEXRDFK1H5cbmWdyQS7LE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

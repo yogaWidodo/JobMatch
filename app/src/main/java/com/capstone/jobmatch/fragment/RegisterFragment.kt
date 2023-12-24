@@ -5,13 +5,18 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import com.capstone.jobmatch.R
 import com.capstone.jobmatch.databinding.FragmentRegisterBinding
+import com.capstone.jobmatch.viewmodel.RegisterViewModel
+
 
 class RegisterFragment : Fragment(R.layout.fragment_register) {
-    private  var _binding: FragmentRegisterBinding? = null
+    private var _binding: FragmentRegisterBinding? = null
     private val binding get() = _binding!!
+    private val viewModel by viewModels<RegisterViewModel>()
+
 
 
     override fun onCreateView(
@@ -26,7 +31,7 @@ class RegisterFragment : Fragment(R.layout.fragment_register) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.btnRegister.setOnClickListener {
-            Navigation.findNavController(it).navigate(R.id.action_registerFragment_to_loginFragment)
+            viewModel.registerNewUser(it,binding, requireContext())
         }
 
     }
