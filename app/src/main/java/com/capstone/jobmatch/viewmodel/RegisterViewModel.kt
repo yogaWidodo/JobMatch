@@ -8,7 +8,9 @@ import android.widget.Toast
 import androidx.lifecycle.ViewModel
 import androidx.navigation.Navigation
 import com.capstone.jobmatch.R
+import com.capstone.jobmatch.databinding.ActivityJomaBinding
 import com.capstone.jobmatch.databinding.FragmentRegisterBinding
+import com.capstone.jobmatch.utills.DateFormatter
 import com.google.firebase.Firebase
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.firestore
@@ -72,8 +74,8 @@ class RegisterViewModel : ViewModel() {
         if (email.isNotEmpty() && password.isNotEmpty()) {
             mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener { p0 ->
-                    saveUserToFirestore(email, phone, nama)
                     if (p0.isSuccessful) {
+                        saveUserToFirestore(email, phone, nama)
                         Toast.makeText(
                             context,
                             "Registration successful!",

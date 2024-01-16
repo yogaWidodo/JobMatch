@@ -1,6 +1,7 @@
 package com.capstone.jobmatch
 
 import android.content.Intent
+import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,7 +10,6 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
-import com.capstone.jobmatch.activity.JobstreetActivity
 import com.capstone.jobmatch.model.History
 import com.capstone.jobmatch.utills.ArrayConverter
 import com.capstone.jobmatch.utills.DropdDown
@@ -40,11 +40,12 @@ class HistoryAdapter(options: FirestoreRecyclerOptions<History>) :
             tahunKerja.text = model.pengalaman
             skills.text = model.skills
             date.text = model.date
-            val array = ArrayConverter.convertStringToArray(model.skills)
+            val array = ArrayConverter.convertStringToArray(model.result)
             DropdDown.init(itemView.context, result, array)
             buttonSearch.setOnClickListener {
-                val intent = Intent(itemView.context, JobstreetActivity::class.java)
-                intent.putExtra("result", result.text.toString())
+                val job = result.text.toString()
+                val uri = "https://www.jobstreet.co.id/id/job-search/$job-jobs/"
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(uri))
                 startActivity(itemView.context, intent, null)
             }
         }

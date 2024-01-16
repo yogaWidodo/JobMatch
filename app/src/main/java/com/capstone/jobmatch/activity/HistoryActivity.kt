@@ -19,11 +19,7 @@ class HistoryActivity : AppCompatActivity() {
         setContentView(binding.root)
         adapter = viewModel.setupRecyclerView(binding.rvHistory, this)
 
-//        viewModel.allHistory.observe(this) { list ->
-//            list?.let {
-//                adapter.updateList(list)
-//            }
-//        }
+
     }
 
 

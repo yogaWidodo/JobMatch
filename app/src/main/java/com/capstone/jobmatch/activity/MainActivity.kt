@@ -1,8 +1,11 @@
 package com.capstone.jobmatch.activity
 
+import android.app.SearchManager
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.capstone.jobmatch.databinding.ActivityMainBinding
 import com.capstone.jobmatch.utills.ArrayConverter.convertStringToArray
 import com.capstone.jobmatch.utills.DropdDown
@@ -24,17 +27,12 @@ class MainActivity : AppCompatActivity() {
             finish()
         }
         binding.ivLatestResult.setOnClickListener {
-            val intent = Intent(this, JobstreetActivity::class.java)
-            intent.putExtra("result", binding.autoCompleteTextView.text.toString())
+            val job = binding.autoCompleteTextView.text.toString()
+            val uri = "https://www.jobstreet.co.id/id/job-search/$job-jobs/"
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(uri))
             startActivity(intent)
         }
         db = FirebaseFirestore.getInstance()
-//        db.collection("Users").document(mAuth.currentUser?.uid.toString()).get().addOnSuccessListener {
-//            binding.tvUserName.text = it.getString("nama")
-//            binding.tvPhone.text = it.getString("phone")
-//            binding.tvEmail.text = it.getString("email")
-//        }
-
         db.collection("Users").document(mAuth.currentUser?.uid.toString())
             .addSnapshotListener { value, _ ->
                 if (value != null) {
@@ -47,32 +45,34 @@ class MainActivity : AppCompatActivity() {
 
         binding.joma.setOnClickListener {
             startActivity(Intent(this, JomaActivity::class.java))
+
         }
 
         binding.ivHistory.setOnClickListener {
             startActivity(Intent(this, HistoryActivity::class.java))
+            getLatestResult()
         }
+        getLatestResult()
     }
 
     private fun getLatestResult() {
-        db.collection("Users").document(mAuth.currentUser?.uid.toString()).collection("JobHistory")
+        db.collection("Users").document(mAuth.currentUser?.uid.toString())
+            .collection("JobHistory")
             .orderBy("date")
             .addSnapshotListener { value, error ->
-
-                if (value != null) {
-                    val result = value.documents.last().getString("result")
-                    val array = convertStringToArray(result.toString())
-                    DropdDown.init(this, binding.autoCompleteTextView, array)
-
-
+                if (error != null) {
+                    Log.d("Main", "getLatestResult: ${error.message}")
                 }
-
+                if (value == null || value.isEmpty) {
+                    Log.d("Main", "getLatestResult: No Data")
+                } else {
+                    val documents = value.documents
+                    if (documents.isNotEmpty()) {
+                        val result = documents.last().getString("result").toString()
+                        val array = convertStringToArray(result)
+                        DropdDown.init(this, binding.autoCompleteTextView, array)
+                    }
+                }
             }
-    }
-
-
-    override fun onResume() {
-        super.onResume()
-        getLatestResult()
     }
 }
