@@ -50,24 +50,14 @@ dependencies {
     implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     implementation("com.google.firebase:firebase-auth:22.3.0")
-    implementation("org.tensorflow:tensorflow-lite-support:0.2.0")
-    implementation("org.tensorflow:tensorflow-lite:2.5.0")
-    implementation("org.tensorflow:tensorflow-lite-gpu:2.5.0")
-    implementation("org.tensorflow:tensorflow-lite-metadata:0.1.0")
     implementation("com.google.firebase:firebase-firestore:24.10.0")
 
-    // Import the BoM for the Firebase platform
-    implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
 
-    // Add the dependency for the Firebase ML model downloader library
-    // When using the BoM, you don't specify versions in Firebase library dependencies
-    implementation("com.google.firebase:firebase-ml-modeldownloader")
 
-    // Also add the dependency for the TensorFlow Lite library and specify its version
-    implementation("org.tensorflow:tensorflow-lite:2.5.0")
 
-    implementation ("com.firebaseui:firebase-ui-firestore:7.2.0")
-    implementation ("com.firebaseui:firebase-ui-auth:7.2.0")
+
+    implementation("com.firebaseui:firebase-ui-firestore:7.2.0")
+    implementation("com.firebaseui:firebase-ui-auth:7.2.0")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
@@ -93,7 +83,13 @@ dependencies {
     implementation("androidx.room:room-ktx:$roomVersion")
     implementation("androidx.room:room-runtime:$roomVersion")
     ksp("androidx.room:room-compiler:$roomVersion")
-    androidTestImplementation ("androidx.room:room-testing:$roomVersion")
-    implementation( "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1")
+    androidTestImplementation("androidx.room:room-testing:$roomVersion")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.1")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.1")
+
+    //DI
+    val koin_version = "3.3.2"
+    implementation ("io.insert-koin:koin-core:$koin_version")
+    implementation ("io.insert-koin:koin-android:$koin_version")
+
 }

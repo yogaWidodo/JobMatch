@@ -33,6 +33,7 @@
     <string name="the_link_will_be_sent_to_your_email">The link will be sent to your email</string>
     <string name="latest_history">Latest History</string>
     <string name="latest_result">Latest Result</string>
+    <string name="delete">Delete</string>
 
     <string-array name="jurusan">
         <item>Science &amp; Technology</item>
