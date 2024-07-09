@@ -1,4 +1,4 @@
-package com.capstone.jobmatch.result
+package com.capstone.jobmatch.core.ui.result
 
 import android.content.Intent
 import android.net.Uri

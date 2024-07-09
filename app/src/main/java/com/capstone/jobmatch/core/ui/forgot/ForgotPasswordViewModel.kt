@@ -1,4 +1,4 @@
-package com.capstone.jobmatch.forgot
+package com.capstone.jobmatch.core.ui.forgot
 
 import androidx.lifecycle.ViewModel
 import com.capstone.jobmatch.core.model.Repository

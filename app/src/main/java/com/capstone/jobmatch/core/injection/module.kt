@@ -1,12 +1,12 @@
 package com.capstone.jobmatch.core.injection
 
-import com.capstone.jobmatch.MainViewModel
+import com.capstone.jobmatch.core.ui.main.MainViewModel
 import com.capstone.jobmatch.core.api.ApiInterface
 import com.capstone.jobmatch.core.model.Repository
-import com.capstone.jobmatch.forgot.ForgotPasswordViewModel
-import com.capstone.jobmatch.history.HistoryViewModel
-import com.capstone.jobmatch.joma.JomaViewModel
-import com.capstone.jobmatch.register.RegisterViewModel
+import com.capstone.jobmatch.core.ui.forgot.ForgotPasswordViewModel
+import com.capstone.jobmatch.core.ui.history.HistoryViewModel
+import com.capstone.jobmatch.core.ui.joma.JomaViewModel
+import com.capstone.jobmatch.core.ui.register.RegisterViewModel
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import okhttp3.OkHttpClient

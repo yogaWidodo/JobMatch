@@ -1,4 +1,4 @@
-package com.capstone.jobmatch.joma
+package com.capstone.jobmatch.core.ui.joma
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

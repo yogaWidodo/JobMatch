@@ -16,19 +16,19 @@
         android:theme="@style/Theme.JobMatch"
         tools:targetApi="31">
         <activity
-            android:name=".result.ResultActivity"
+            android:name=".core.ui.result.ResultActivity"
             android:exported="false" />
         <activity
-            android:name=".history.HistoryActivity"
+            android:name=".core.ui.history.HistoryActivity"
             android:exported="false" />
         <activity
-            android:name=".joma.JomaActivity"
+            android:name=".core.ui.joma.JomaActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".core.ui.main.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".login.LoginActivity"
+            android:name=".core.ui.login.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

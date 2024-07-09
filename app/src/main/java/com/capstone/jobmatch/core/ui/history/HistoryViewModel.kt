@@ -1,4 +1,4 @@
-package com.capstone.jobmatch.history
+package com.capstone.jobmatch.core.ui.history
 
 import androidx.lifecycle.ViewModel
 import com.capstone.jobmatch.core.model.History

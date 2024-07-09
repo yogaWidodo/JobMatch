@@ -1,4 +1,4 @@
-package com.capstone.jobmatch.forgot
+package com.capstone.jobmatch.core.ui.forgot
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

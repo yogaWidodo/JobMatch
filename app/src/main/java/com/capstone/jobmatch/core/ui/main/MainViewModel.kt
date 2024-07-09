@@ -1,4 +1,4 @@
-package com.capstone.jobmatch
+package com.capstone.jobmatch.core.ui.main
 
 import android.content.Context
 import androidx.lifecycle.ViewModel

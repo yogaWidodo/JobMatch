@@ -1,4 +1,4 @@
-package com.capstone.jobmatch.login
+package com.capstone.jobmatch.core.ui.login
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

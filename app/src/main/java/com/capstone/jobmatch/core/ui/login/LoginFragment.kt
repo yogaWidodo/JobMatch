@@ -1,4 +1,4 @@
-package com.capstone.jobmatch.login
+package com.capstone.jobmatch.core.ui.login
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,7 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.Navigation
-import com.capstone.jobmatch.MainActivity
+import com.capstone.jobmatch.core.ui.main.MainActivity
 import com.capstone.jobmatch.R
 import com.capstone.jobmatch.databinding.FragmentLoginBinding
 import com.google.firebase.auth.FirebaseAuth

@@ -1,18 +1,13 @@
-package com.capstone.jobmatch
+package com.capstone.jobmatch.core.ui.main
 
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import com.capstone.jobmatch.databinding.ActivityMainBinding
-import com.capstone.jobmatch.history.HistoryActivity
-import com.capstone.jobmatch.joma.JomaActivity
-import com.capstone.jobmatch.login.LoginActivity
-import com.capstone.jobmatch.core.utills.ArrayConverter.convertStringToArray
-import com.capstone.jobmatch.core.utills.DropdDown
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.FirebaseFirestore
+import com.capstone.jobmatch.core.ui.history.HistoryActivity
+import com.capstone.jobmatch.core.ui.joma.JomaActivity
+import com.capstone.jobmatch.core.ui.login.LoginActivity
 import org.koin.android.ext.android.inject
 
 class MainActivity : AppCompatActivity() {

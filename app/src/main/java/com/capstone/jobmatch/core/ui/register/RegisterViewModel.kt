@@ -1,4 +1,4 @@
-package com.capstone.jobmatch.register
+package com.capstone.jobmatch.core.ui.register
 
 import android.content.Context
 import android.view.View

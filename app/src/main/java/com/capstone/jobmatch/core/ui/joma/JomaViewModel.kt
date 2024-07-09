@@ -1,4 +1,4 @@
-package com.capstone.jobmatch.joma
+package com.capstone.jobmatch.core.ui.joma
 
 import android.content.Context
 import android.content.Intent
@@ -6,7 +6,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.ViewModel
-import com.capstone.jobmatch.result.ResultActivity
+import com.capstone.jobmatch.core.ui.result.ResultActivity
 import com.capstone.jobmatch.core.model.Repository
 import com.capstone.jobmatch.databinding.ActivityJomaBinding
 import com.capstone.jobmatch.core.model.PredictResponse

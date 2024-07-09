@@ -1,4 +1,4 @@
-package com.capstone.jobmatch.history
+package com.capstone.jobmatch.core.ui.history
 
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
